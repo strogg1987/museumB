@@ -1,9 +1,7 @@
-//A basic example
-
 import VLCJVideo.*;
 
 VLCJVideo video;
-String[] options = {"--hwdec=auto"};
+String[] options = {"--avcodec-hw=any"};
 int val =0;
 void setup() {
   fullScreen();
@@ -18,7 +16,7 @@ void draw() {
 if (val != 0){
 play();
 }
-if(video.isStopped()) {
+if(video.isStopped() || val == 0) {
 video.openAndPlay(dataPath("")+"/Сохраняя будущее.mp4");
 }
 }
@@ -39,38 +37,38 @@ video.openAndPlay(dataPath("")+"/Вышка.mp4");
   }
       if(key=='3'){
 val = 3;
-video.openAndPlay(dataPath("")+"3.Домик Сели.mp4");
+video.openAndPlay(dataPath("")+"/10.Цинкзавод.mp4");
   }
       if(key=='4'){
 val = 4;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/3.Домик Сели.mp4");
   }
       if(key=='5'){
 val = 5;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Дк_железнодорожников.mp4");
   }
       if(key=='6'){
 val = 6;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Дк Металлургов.mp4");
   }
       if(key=='7'){
 val = 7;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Дом Белова.mp4");
   }
       if(key=='8'){
 val = 8;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Кузбассрадио.mp4");
   }
       if(key=='9'){
 val = 9;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/снег городки.mp4");
   }
       if(key=='0'){
 val = 10;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Сохраняя будущее.mp4");
   }
       if(key=='-'){
 val = 10;
-video.openAndPlay(dataPath("")+"./Вышка.mp4");
+video.openAndPlay(dataPath("")+"/Шахта.mp4");
   }
 }
